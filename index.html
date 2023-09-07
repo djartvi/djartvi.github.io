@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать в такси М-КА!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #FF9900, #ffffff); /* Градиент от желтого к оранжевому */
+            color: white;
+            height: 100%;
+
+        }
+
+        h1 {
+            font-size: 30px; /* Увеличенный размер шрифта */
+            color: black; /* Черный текст */
+
+        }
+
+        p {
+            font-size: 22px; /* Увеличенный размер шрифта */
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .link {
+            margin: 20px;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            /* Пример адаптации для устройств с шириной экрана до 600px */
+        body {
+                        overflow: hidden;
+
+
+        }
+            h1 {
+                font-size: 24px; /* Уменьшенный размер шрифта для маленьких экранов */
+            }
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать<br>в такси М-КА!</h1>
+    <div class="links">
+        <div class="link">
+            <a href="ссылка на приложение для пассажиров в App Store" target="_blank">
+                <img src="ссылка на иконку App Store">
+                <p>Скачать на iOS</p>
+            </a>
+        </div>
+        <div class="link">
+            <a href="https://play.google.com/store/apps/details?id=m_ka.taxi" target="_blank">
+                <img src="https://lh3.googleusercontent.com/pw/AIL4fc8dbUBg9sjrgjqIVgxSoS2yw3LCneewrPg1Kq0RgFfNGrv6t1NQylYq1y-IZGAaQSuoVd-lL5UQknpTFl-LHmMvyp3ymNlAwrd9oAxaMprCoO-tRj6lxVE9r1OHwQCu-bbWGdBP8fy8G-7aFJzMYbtM=w250-h250-s-no?authuser=0">
+                <p>Скачать на Android</p>
+            </a>
+        </div>
+    </div>
+    <script>
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var links = document.querySelector('.links');
+
+        if (userAgent.match(/iPhone|iPod/i)) {
+            // window.location.href = 'itms-apps://apps.apple.com/th/app/voice-changer-tune-my-voice/id6448018427';
+            alert('Это iPhone!'); // Выводим всплывающее окно с сообщением
+        } else if (userAgent.match(/android/i)) {
+    // window.location.href = 'https://play.google.com/store/apps/details?id=m_ka.taxi';
+            alert('Это ДРУИД!'); // Выводим всплывающее окно с сообщением
+
+        } else {
+         // Если устройство не определено, показываем ссылки и QR-коды
+            // links.style.display = 'block';
+                        alert('Это по умолчанию!'); // Выводим всплывающее окно с сообщением
+
+        }
+    </script>
+</body>
+</html>
