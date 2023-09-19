@@ -82,14 +82,12 @@
     <script>
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
         var links = document.querySelector('.links');
-        var redirected = false;
 
-        if (userAgent.match(/iPhone|iPod/i) && !redirected) {
+        if (userAgent.match(/iPhone|iPod/i)) {
+            window.location.href = 'https://apps.apple.com/app/id6443615224';
+        } else if (userAgent.match(/iPad/i)) {
             redirected = true;
-            window.location.href = 'itms-apps://apps.apple.com/app/id6443615224';
-        } else if (userAgent.match(/iPad/i)  && !redirected) {
-            redirected = true;
-            window.location.href = 'itms-apps://apps.apple.com/app/id6443615224'
+            window.location.href = 'https://apps.apple.com/app/id6443615224'
         } else if (userAgent.match(/android/i)) {
             window.location.href = 'https://play.google.com/store/apps/details?id=m_ka.taxi';
         } else {
